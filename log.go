@@ -20,6 +20,23 @@ var (
 	LogLevel = INFO
 )
 
+func (l LogLevelType) String() string {
+	switch l {
+	case TRACE:
+		return "TRACE"
+	case DEBUG:
+		return "DEBUG"
+	case WARN:
+		return "WARN"
+	case ERROR:
+		return "ERROR"
+	case FATAL:
+		return "FATAL"
+	default:
+		return "INFO"
+	}
+}
+
 func Println(args ...interface{}) {
 	Infoln(args...)
 }
